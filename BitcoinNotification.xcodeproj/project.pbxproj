@@ -13,6 +13,10 @@
 		4950F9C7204752C600C82525 /* BitcoinNotification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4950F9C5204752C600C82525 /* BitcoinNotification.xcdatamodeld */; };
 		4950F9C9204752C600C82525 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4950F9C8204752C600C82525 /* Assets.xcassets */; };
 		4950F9CC204752C600C82525 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4950F9CA204752C600C82525 /* LaunchScreen.storyboard */; };
+		4950F9D420475C2A00C82525 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4950F9D320475C2A00C82525 /* logo.png */; };
+		4950F9D620475E9100C82525 /* RestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950F9D520475E9100C82525 /* RestUtil.swift */; };
+		4950F9D820475EBD00C82525 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950F9D720475EBD00C82525 /* Service.swift */; };
+		4950F9DA20475FE400C82525 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4950F9D920475FE400C82525 /* EndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		4950F9C8204752C600C82525 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4950F9CB204752C600C82525 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4950F9CD204752C600C82525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4950F9D320475C2A00C82525 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4950F9D520475E9100C82525 /* RestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestUtil.swift; sourceTree = "<group>"; };
+		4950F9D720475EBD00C82525 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4950F9D920475FE400C82525 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		4950F9DB2047725600C82525 /* BitcoinNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BitcoinNotification.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +65,13 @@
 		4950F9BD204752C600C82525 /* BitcoinNotification */ = {
 			isa = PBXGroup;
 			children = (
+				4950F9DB2047725600C82525 /* BitcoinNotification.entitlements */,
+				4950F9D320475C2A00C82525 /* logo.png */,
 				4950F9BE204752C600C82525 /* AppDelegate.swift */,
 				4950F9C0204752C600C82525 /* ViewController.swift */,
+				4950F9D720475EBD00C82525 /* Service.swift */,
+				4950F9D520475E9100C82525 /* RestUtil.swift */,
+				4950F9D920475FE400C82525 /* EndPoints.swift */,
 				4950F9C2204752C600C82525 /* Main.storyboard */,
 				4950F9C8204752C600C82525 /* Assets.xcassets */,
 				4950F9CA204752C600C82525 /* LaunchScreen.storyboard */,
@@ -100,6 +114,14 @@
 					4950F9BA204752C600C82525 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +151,7 @@
 				4950F9CC204752C600C82525 /* LaunchScreen.storyboard in Resources */,
 				4950F9C9204752C600C82525 /* Assets.xcassets in Resources */,
 				4950F9C4204752C600C82525 /* Main.storyboard in Resources */,
+				4950F9D420475C2A00C82525 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4950F9C1204752C600C82525 /* ViewController.swift in Sources */,
+				4950F9D620475E9100C82525 /* RestUtil.swift in Sources */,
+				4950F9D820475EBD00C82525 /* Service.swift in Sources */,
 				4950F9C7204752C600C82525 /* BitcoinNotification.xcdatamodeld in Sources */,
+				4950F9DA20475FE400C82525 /* EndPoints.swift in Sources */,
 				4950F9BF204752C600C82525 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BitcoinNotification/BitcoinNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MC2W678MVZ;
 				INFOPLIST_FILE = BitcoinNotification/Info.plist;
@@ -293,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BitcoinNotification/BitcoinNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MC2W678MVZ;
 				INFOPLIST_FILE = BitcoinNotification/Info.plist;
